@@ -8,7 +8,7 @@ export default function Home() {
   const testBackend = async () => {
     setLoading(true);
     try {
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+      const apiUrl = "https://rayvice-backend.onrender.com";
       const res = await fetch(`${apiUrl}/api/health`);
       const data = await res.json();
       setResponse(JSON.stringify(data, null, 2));
